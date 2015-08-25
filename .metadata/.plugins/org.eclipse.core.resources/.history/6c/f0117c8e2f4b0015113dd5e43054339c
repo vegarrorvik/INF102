@@ -1,0 +1,44 @@
+package ovingar;
+
+import java.util.Stack;
+
+public class Parentheses {
+
+	public static void main(String[] args) {
+		
+		
+		String string1 = "[()]{}{[()()]()}";
+		String string2 = "[(])";
+		
+		checkParentheses(string1);
+		
+	}
+	
+	public static boolean checkParentheses(String str){
+		Stack <Character> stack = new Stack<>();
+		
+		for(int i = 0; i<str.length(); i++){
+			if(str.charAt(i) == '(' || str.charAt(i) == '{' || str.charAt(i) == '[')
+				stack.push(str.charAt(i));
+			else if(str.charAt(i) == ')'){
+				if(stack.peek() == '(')
+					stack.pop();
+				else
+					return false;
+			}else if(str.charAt(i) == '}'){
+				if(stack.peek() == '{')
+					stack.pop();
+				else
+					return false;
+			}
+			else if(str.charAt(i) == ']'){
+				if(stack.peek() == '[')
+					stack.pop();
+				else
+					return false;
+			}			
+		}
+		return stack.isEmpty();
+	}
+
+}
