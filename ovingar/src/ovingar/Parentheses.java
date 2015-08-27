@@ -8,6 +8,8 @@ import java.util.Stack;
  * 			25th of August, 2015
  * 			Main class and a method that checks if given string is correct
  *         in parenthesis formation.
+ *         
+ *         Oppgave 1.3.4
  */
 
 public class Parentheses {
@@ -17,7 +19,7 @@ public class Parentheses {
 		String string1 = "[()]{}{[()()]()}";
 		String string2 = "[(])";
 
-		checkParentheses(string2);
+		checkParentheses(string1);
 
 	}
 
@@ -31,21 +33,21 @@ public class Parentheses {
 			else if (str.charAt(i) == ')') {
 				if (stack.peek() == '(')
 					stack.pop();
-				else
+				else{
 					System.out.println(false);
-				return false;
+				return false;}
 			} else if (str.charAt(i) == '}') {
 				if (stack.peek() == '{')
 					stack.pop();
-				else
+				else{
 					System.out.println(false);
-				return false;
+				return false;}
 			} else if (str.charAt(i) == ']') {
 				if (stack.peek() == '[')
 					stack.pop();
-				else
+				else{
 					System.out.println(false);
-				return false;
+				return false;}
 			}
 		}
 		System.out.println(stack.isEmpty());
