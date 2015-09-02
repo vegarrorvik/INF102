@@ -23,7 +23,7 @@ public class NumberOfPairs {
 	public static void main(String[] args) throws IOException {
 		ArrayList<Integer> numbers = new ArrayList<>();
 		Random r = new Random();
-		BufferedReader br = new BufferedReader(new FileReader(new File("src/ovingar/files/paircountdata.txt")));
+		BufferedReader br = new BufferedReader(new FileReader(new File("ovingar/src/ovingar/files/paircountdata.txt")));
 		
 		String [] numbers213 = br.readLine().split(" ");
 		
