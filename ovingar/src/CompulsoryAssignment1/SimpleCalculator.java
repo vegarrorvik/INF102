@@ -4,7 +4,7 @@ import java.util.Stack;
 
 /**
  * Created by Vegar on 16.09.15.
- *Parse gjennom koden, viss det e integers, push dei til stack. E det operator, pluss sammen dei to øverste,
+ * Parse gjennom koden, viss det e integers, push dei til stack. E det operator, pluss sammen dei to øverste,
  * pop dei, og legg til det nye resultatet, og continue.
  */
 public class SimpleCalculator {

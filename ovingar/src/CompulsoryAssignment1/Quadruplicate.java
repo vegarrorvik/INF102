@@ -11,6 +11,10 @@ import edu.princeton.cs.algs4.BinarySearchST;
 
 /**
  * Created by Vegar on 15.09.15.
+ * Takes for lists of names, sorts them using mergesort (could've used Javas sort algorithm, because it would use
+ * mergesort, but to control it 100% I chose to specifically use mergesort). This way it will not go over
+ * linearithmic runtime. Then it searches through the array using binarysearch, which would hold the search time
+ * logarithmic. All in all - O(n) = N log N.
  */
 public class Quadruplicate {
     public static void main(String[] args) throws IOException {

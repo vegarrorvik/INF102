@@ -1,6 +1,8 @@
 package Generators;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Random;
 
 /**
  * Created by Vegar on 16.09.15.
@@ -8,10 +10,11 @@ import java.util.ArrayList;
 public class SortedArrays {
     Integer[] intArray;
     ArrayList <Integer>arrayList;
+    Random r;
 
-    public Integer[] getSortedArray(int length){
+    public Integer[] getSortedArray(Integer length){
         intArray = new Integer[length];
-        for(int i = 0 ; i < length; i++){
+        for(Integer i = 0 ; i < length; i++){
             intArray[i] = i;
         }
         return intArray;
@@ -23,5 +26,14 @@ public class SortedArrays {
             arrayList.add(i,i);
         }
         return arrayList;
+    }
+
+    public Comparable[] getComparableArray(int length){
+        Comparable[] array = new Comparable[length];
+        for(int i = 0; i < length; i++){
+            array[i] = r.nextInt();
+        }
+        Arrays.sort(array);
+        return array;
     }
 }
